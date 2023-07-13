@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Fund Me App</title>
-  </head>
 
-  <body>
-    <button id="connectButton">Connect</button>
-    <button id="balanceButton">getBalance</button>
-    <button id="withdrawButton">Withdraw</button>
-    <!-- <form> -->
-    <label for="ethAmount">ETH Amount</label>
-    <input id="ethAmount" placeholder="0.1" />
-    <button type="button" id="fundButton" > Fund </button>
-    <!-- </form> -->
-  </body>
+<head>
+  <title>Fund Me App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <script src="./index.js" type="module"></script>
+<body>
+
+
+  <div class="dashboard">
+
+    <div class="connect">
+      <button class="button" id="connectButton">Connect</button>
+    </div>
+
+    <h2>Dashboard</h2>
+    <h3 style="margin-top: 3rem;">Fund</h3>
+    <div class="space-between" id="fund-form">
+      <label for="ethAmount">ETH Amount</label>
+      <input id="ethAmount" placeholder="0.1" />
+      <button class="button" type="button" id="fundButton"> Fund </button>
+    </div>
+
+    <h3 style="margin-top: 3rem;">Other Interactions</h3>
+    <div class="space-between" id="buttons" style="margin-top: 2rem;">
+      <button class="button" id="balanceButton">getBalance</button>
+      <button class="button" id="withdrawButton">Withdraw</button>
+    </div>
+
+
+    <div class="info-display">
+      <div class="balance">
+        <h3>Balance of the contract:</h3>
+        <div id="balanceText" class="balance-display">0 ETH</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<script src="./index.js" type="module"></script>
+
 </html>
