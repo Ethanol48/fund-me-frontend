@@ -25,8 +25,9 @@
 
     <h3 style="margin-top: 3rem;">Other Interactions</h3>
     <div class="space-between" id="buttons" style="margin-top: 2rem;">
-      <button class="button" id="balanceButton">getBalance</button>
-      <button class="button" id="withdrawButton">Withdraw</button>
+      <button class="button" id="balanceButton">Balance</button>
+      <button class="button" id="withdrawButton">Withdraw Funds</button>
+      <button class="button" id="getLogs">Get logs</button>
     </div>
 
 
@@ -35,6 +36,14 @@
         <h3>Balance of the contract:</h3>
         <div id="balanceText" class="balance-display">0 ETH</div>
       </div>
+
+      <div class="logs">
+        <h3>Funders</h3>
+        <p class="hidden">Fetching logs...</p>
+        <div id="logsDisplay">
+        </div>
+      </div>
+
     </div>
 
   </div>

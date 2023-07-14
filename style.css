@@ -16,8 +16,8 @@ html {
   text-align: center;
   /* vertical-align: middle; */
 
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  /* padding-top: 2.5rem;
+  padding-bottom: 2.5rem; */
 
   /* height: 5rem; */
   border: #f7f7f7;
@@ -77,4 +77,33 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.info-display {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.log-container {
+
+  min-width: 320px;
+  max-width: 500px;
+
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.5rem;
+  padding: 10px;
+
+  margin-bottom: 1rem;
+
+}
+
+.hidden {
+  display: none;
+}
+
+/* How do I disable that when cliking in a link to have the text in purple? */
+a:link {
+  color: #00b7ff;
 }
