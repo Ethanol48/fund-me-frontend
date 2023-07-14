@@ -105,5 +105,9 @@ input {
 
 /* How do I disable that when cliking in a link to have the text in purple? */
 a:link {
-  color: #00b7ff;
+  color: #f7f7f7;
+}
+
+a:visited {
+  color: #f7f7f7;
 }
