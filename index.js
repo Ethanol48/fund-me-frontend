@@ -57,16 +57,20 @@ async function connect() {
 async function withdraw() {
   console.log(`Withdrawing...`)
 
+  let account = await ethereum.request({ method: "eth_requestAccounts" })
+  account = account[0]
+  account = account.toUpperCase()
 
-  account = await ethereum.request({ method: "eth_requestAccounts" });
-  const contract = new ethers.Contract(contractAddress, abi, provider);
-  owner = await contract.getOwner().call();
+  const provider = new ethers.providers.Web3Provider(window.ethereum)
+  const contract = new ethers.Contract(contractAddress, abi, provider)
+  let owner = await contract.getOwner()
+  owner = owner.toUpperCase()
 
   if (account !== owner) {
-    alert("only the owner can call this function")
-    return;
+    alert("Only the owner can call this function")
+    return
   }
-  
+
   if (typeof window.ethereum !== "undefined") {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     await provider.send("eth_requestAccounts", [])
