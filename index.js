@@ -56,6 +56,17 @@ async function connect() {
 
 async function withdraw() {
   console.log(`Withdrawing...`)
+
+
+  account = await ethereum.request({ method: "eth_requestAccounts" });
+  const contract = new ethers.Contract(contractAddress, abi, provider);
+  owner = await contract.getOwner().call();
+
+  if (account !== owner) {
+    alert("only the owner can call this function")
+    return;
+  }
+  
   if (typeof window.ethereum !== "undefined") {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     await provider.send("eth_requestAccounts", [])
